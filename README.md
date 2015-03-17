@@ -7,6 +7,8 @@ Problem: Keeping passwords, api keys, or any secret safe while maintaining use o
 
 An entire git repository will be used to store secrets.  Most contents of the repository will be encrypted, exceptions will be defined in a `.gitattributes` file.
 
+For a complete end to end solution to deploy secrets in a CI environment, see: https://gist.github.com/ckelner/54c17aa5c1b44650bfeb
+
 ## Table of Contents
 - [Initial Setup](#initial-setup): How to configure a machine to initialize the repository.
 - [Repository Setup](#repository-setup): How to setup the repository for encryption.
