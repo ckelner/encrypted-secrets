@@ -1,0 +1,10 @@
+* filter=openssl diff=openssl
+.gitattributes -filter -diff
+README.md -filter -diff
+LICENSE -filter -diff
+gitconfig -filter -diff
+clean_filter_openssl -filter -diff
+diff_filter_openssl -filter -diff
+smudge_filter_openssl -filter -diff
+[merge]
+    renormalize=true
