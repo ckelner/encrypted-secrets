@@ -14,6 +14,7 @@ For a complete end to end solution to deploy secrets in a CI environment, see: h
 - [Repository Setup](#repository-setup): How to setup the repository for encryption.
 - [Using the Repository](#using-the-repository): How to perform a fresh clone of the repository.
 - [Comitting Secrets](#comitting-secrets): How to commit back to the repository.
+- [Continuous Integration](#Continuous Integration): How to use this repo with CI
 
 ### Initial Setup
 
@@ -190,3 +191,6 @@ git add -A #or some variation thereof
 git commit -m "your commit message"
 git push
 ```
+
+## Continuous Integration
+See: [CONTINUOUS_INTEGRATION.md](https://github.com/ckelner/encrypted-secrets/blob/master/CONTINUOUS_INTEGRATION.md)

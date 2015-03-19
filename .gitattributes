@@ -1,6 +1,7 @@
 * filter=openssl diff=openssl
 .gitattributes -filter -diff
 README.md -filter -diff
+CONTINUOUS_INTEGRATION.md -filter -diff
 LICENSE -filter -diff
 gitconfig -filter -diff
 clean_filter_openssl -filter -diff
