@@ -160,7 +160,7 @@ The following snippit should be appended to `.git/config` as seen in the section
     textconv = ~/.gitencrypt/diff_filter_openssl
 ```
 
-3) Then `.gitattributes` will need to be added manually.  The contents of the file should match those found in this repository and from the section "Machine Setup":
+3) Then `.gitattributes` will need to be added manually and a [copy can be found in this repo](https://github.com/ckelner/encrypted-secrets/blob/master/.gitattributes).
 ```
 $ vi .gitattributes
 ```
