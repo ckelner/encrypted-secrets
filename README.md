@@ -134,8 +134,8 @@ To use the repository on any other machine, or a fresh `git clone`, special step
 1) The intial `git clone` must be performed with the `-n` flag.  `-n` doesn't perform a checkout of HEAD after the git clone is complete.
 
 ```
-$ git clone -n https://github.com/TheWeatherCompany/grid-secrets.git
-Cloning into 'grid-secrets'...
+$ git clone -n https://github.com/ckelner/encrypted-secrets.git
+Cloning into 'encrypted-secrets'...
 Username for 'https://github.com': 
 Password for 'https://<user>@github.com': 
 remote: Counting objects: 80, done.
@@ -147,7 +147,7 @@ Checking connectivity... done.
 
 2) Configure `.git/config`:
 ```
-cd grid-secrets/
+cd encrypted-secrets/
 vi .git/config
 ```
 
