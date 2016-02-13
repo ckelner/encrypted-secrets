@@ -10,7 +10,7 @@ An entire git repository will be used to store secrets.  Most contents of the re
 For a complete end to end solution to deploy secrets in a CI environment, see: https://gist.github.com/ckelner/54c17aa5c1b44650bfeb
 
 ## Table of Contents
-- [Initial Setup](#initial-setup): How to configure a machine to initialize the repository.
+- [Initial Setup](#initial-setup): How to configure a workstation to initialize the repository.
 - [Repository Setup](#repository-setup): How to setup the repository for encryption.
 - [Using the Repository](#using-the-repository): How to perform a fresh clone of the repository.
 - [Comitting Secrets](#comitting-secrets): How to commit back to the repository.
@@ -18,7 +18,7 @@ For a complete end to end solution to deploy secrets in a CI environment, see: h
 
 ### Initial Setup
 
-Before creating the repository, the machine which will initialize the repository must be setup first.  Perform the following commands in user's home directory `~/`:
+Before creating the repository, the workstation which will initialize the repository must be setup first.  Perform the following commands in user's home directory `~/`:
 ```shell
 mkdir .gitencrypt
 cd !$
@@ -77,7 +77,7 @@ Files in the `.gitencrypt` directory should only be stashed locally and never sh
 
 ### Repository Setup
 
-The repository needs to be configured to use these `.gitencrypt` scripts as defined in "Machine Setup".  Create the git repository in GitHub then clone to desired directory.
+The repository needs to be configured to use these `.gitencrypt` scripts as defined in "Initial Setup".  Create the git repository in GitHub then clone to desired directory.
 
 Navigate to the new repo then open `.git/config` and add the following to the end of the file where `filter` and `diff` attributes are assigned to drivers named `openssl`:
 ```
@@ -129,7 +129,7 @@ As seen in the example, the staged file, and ultimately what gets pushed to the 
 
 ### Using the Repository
 
-To use the repository on any other machine, or a fresh `git clone`, special steps must be taken for encryption to work.
+To use the repository on any other workstation, or a fresh `git clone`, special steps must be taken for encryption to work.
 
 1) The intial `git clone` must be performed with the `-n` flag.  `-n` doesn't perform a checkout of HEAD after the git clone is complete.
 
@@ -151,7 +151,7 @@ cd encrypted-secrets/
 vi .git/config
 ```
 
-The following snippit should be appended to `.git/config` as seen in the section "Machine Setup":
+The following snippit should be appended to `.git/config` as seen in the section "Inital Setup":
 ```
 [filter "openssl"]
     smudge = ~/.gitencrypt/smudge_filter_openssl
